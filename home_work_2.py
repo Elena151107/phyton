@@ -20,15 +20,15 @@ while True:
         num1 = []
         math = []
         count = 0
-
+         
         for elem in list_s:
-            if elem != '+' and elem != '-' and elem != '*' and elem != '/':
+            if elem.isdigit():
                 num1.append(elem)
                 count+=1
             if elem == '+' or elem == '-' or elem == '*' or elem == '/':
                 math.append(elem)
                 break
-
+                 
     n = count + 1
     num2 = int(s[n:])
     num1 = int(''.join(num1))
