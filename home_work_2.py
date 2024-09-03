@@ -53,6 +53,8 @@ while True:
         print('Неверная запись арифметического выражения')
 
 
+
+
 """  Домашнее задание 2.3. 
      Создайте программу, которая будет принимать на вход
      строку и выводить на экран все подстроки этой строки.
@@ -63,4 +65,34 @@ print(list_s)
 print()
 for char in list_s:
     print(char)
+
+
+
+"""  Домашнее задание 2.4.
+     Создайте программу, которая будет принимать на вход
+     строку и выводить количество букв, цифр и специальных
+     символов в этой строке.
+"""
+s = 'Сидел барсук 5 часов и ел 3 кг пюре + 200 гр моркови за 900 $'
+list_s = s.split()
+print(list_s)
+letter = []
+dig = []
+
+for elem in list_s:
+    for i in range(len(elem)):
+        if elem[i].isdigit():
+           dig.append(elem[i])
+        elif elem[i].isalpha():
+            letter.append(elem[i])
+        else:
+            print('And have another simbols in this string')
+print(dig)
+print(letter)
+simbols = len(s) - len(dig) - len(letter)
+print(f'Длина строки: {len(s)}')
+print(f'Количество цифр в строке: {len(dig)}')
+print(f'Количество букв в строке: {len(letter)}')
+print(f'Количество символов в строке: {simbols}')
+
 
