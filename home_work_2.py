@@ -51,7 +51,22 @@ while True:
         print(f'Сумма операции деления чисел: {result}')
     else:
         print('Неверная запись арифметического выражения')
-
+# Вариант решения второй
+#     match math:
+#         case '+':
+#             result = num1 + num2
+#             print(f'Сумма чисел: {result}')
+#         case '-':
+#             result = num1 - num2
+#             print(f'Разность чисел: {result}')
+#         case '*':
+#             result = num1 * num2
+#             print(f'Сумма операции умножения чисел: {result}')
+#         case '/':
+#             result = num1 / num2
+#             print(f'Сумма операции деления чисел: {result}')
+#         case _:
+#             print('Неверная запись арифметического выражения')
 
 
 
