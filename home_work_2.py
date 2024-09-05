@@ -38,6 +38,55 @@ while True:
         print()
 
         num1 = []
+        num2 = []
+        math = []
+        count = 0
+
+        for elem in list_s:
+            if elem.isdigit():
+                num1.append(elem)
+                count+=1
+            else:
+                math.append(elem)
+                break
+            num2 = list_s[count+1:]
+
+    num1 = int(''.join(num1))
+    num2 = int(''.join(num2))
+    math = ''.join(math)
+    print(num1)
+    print(math)
+    print(num2)
+
+    match math:
+        case '+':
+            result = num1 + num2
+            print(f'Сумма чисел: {result}')
+        case '-':
+            result = num1 - num2
+            print(f'Разность чисел: {result}')
+        case '*':
+            result = num1 * num2
+            print(f'Сумма операции умножения чисел: {result}')
+        case '/':
+            result = num1 / num2
+            print(f'Сумма операции деления чисел: {result}')
+        case _:
+            print('Неверная запись арифметического выражения')
+
+
+# Вариант решения второй
+while True:
+    s = input('Введите арифметическое выражение (0 - выход):  ')
+    if s == '0':
+        break
+    else:
+        list_s = []
+        for i in range(len(s)):
+            list_s.append(s[i])
+        print()
+
+        num1 = []
         math = []
         count = 0
          
@@ -71,23 +120,6 @@ while True:
         print(f'Сумма операции деления чисел: {result}')
     else:
         print('Неверная запись арифметического выражения')
-         
-# Вариант решения второй
-#     match math:
-#         case '+':
-#             result = num1 + num2
-#             print(f'Сумма чисел: {result}')
-#         case '-':
-#             result = num1 - num2
-#             print(f'Разность чисел: {result}')
-#         case '*':
-#             result = num1 * num2
-#             print(f'Сумма операции умножения чисел: {result}')
-#         case '/':
-#             result = num1 / num2
-#             print(f'Сумма операции деления чисел: {result}')
-#         case _:
-#             print('Неверная запись арифметического выражения')
 
 
 
