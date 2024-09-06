@@ -82,7 +82,7 @@ else:
 """
 import re
 time = input('Input your time, please: ')
-pattern = r"^(0\d|1\d{1}|2[0-3]):(0\d|[1-5]\d{1}):(0\d|[1-5]\d{1})$"
+pattern = r"^(0\d|1\d|2[0-3]):(0\d|[1-5]\d):(0\d|[1-5]\d)$"
 if re.match(pattern, time):
     print('right format time')
 else:
