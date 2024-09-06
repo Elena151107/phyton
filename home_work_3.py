@@ -62,7 +62,7 @@ print(list_dig)
 """
 import re
 phone_number = input('Input your phone number (example: +X (XXX) XXX-XXXX): ')
-pattern = r"^\+\d{1}\s\(\d{3}\)\s\d{3}\-\d{4}$"
+pattern = r"^\+\d\s\(\d{3}\)\s\d{3}\-\d{4}$"
 if re.match(pattern, phone_number):
     print('right format phone number')
 else:
