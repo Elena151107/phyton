@@ -37,6 +37,11 @@ else:
 # home_work 4/4
 
 list1 = ['ab', 'a', 'abcdef', 'a', 'abcde', 'abc', 'abcd']
+# 1
+max_len_word = len(max(list1))
+list2 = [word + '_' * (max_len_word - len(word)) for word in list1]
+print(list2)
+# 2
 max_len = 1
 for elem in range(len(list1)):
     if len(list1[elem]) > max_len:
