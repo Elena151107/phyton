@@ -10,6 +10,8 @@ for el in list1:
     for i in el:
         list2.append(i)
 
+
+
 #vhome_work 4/2
 
 list1 = [1, 2, 0, 3, '4', 5, 2, 4, 10, 7, 8]
@@ -18,7 +20,10 @@ target = 4
 list2 = [i for i in list1 if int(i) != target]
 print(list2)
 
+
+
 # home_work 4/3
+
 list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 list2 = [17, 18, 11]
 intersect_list = list(set(list1).intersection(list2))   # метод пересечения
@@ -27,7 +32,10 @@ if intersect_list:
 else:
     print('no intersection')
 
+
+
 # home_work 4/4
+
 list1 = ['ab', 'a', 'abcdef', 'a', 'abcde', 'abc', 'abcd']
 max_len = 1
 for elem in range(len(list1)):
