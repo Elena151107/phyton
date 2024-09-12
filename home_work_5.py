@@ -8,7 +8,7 @@ print(set1)
 set2 = set(list2)
 print(set2)
 print(set1.intersection(set2))
-#print(set(list1).intersection(set(list2)))
+## print(set(list1).intersection(set(list2)))
 
 
 # # home_work 5/2
@@ -24,7 +24,6 @@ print(set1.intersection(set2))
 """ Создайте кортеж, содержащий несколько списков. Напишите программу,
  которая выводит все уникальные элементы из всех списков в кортеже.  """
 tup_1 = ([4, 8, 4, 9, 2, 8, 2], [44, 'p', 44, 'l', 44], [1, 0, 1, 0, 't', 1, 0], [4, 8, 4, 8, 'p'])
-# tup_1 = ((4, 8, 4, 9, 2, 8, 2), (44, 'p', 44, 'l', 44), (1, 0, 1, 0, 't', 1, 0), (4, 8, 4, 8, 'p'))
 print(tup_1)
 unique_elem = [list(set(elem)) for elem in tup_1]
 print(unique_elem)    # [[8, 9, 2, 4], ['p', 44, 'l'], [0, 1, 't'], [8, 4, 'p']]
@@ -36,7 +35,7 @@ print(unique_elem)    # [[8, 9, 2, 4], ['p', 44, 'l'], [0, 1, 't'], [8, 4, 'p']]
 этой строке.  """
 str1 = 'Мир мир, мир / мир / мир = 5 = 55 = 555!'
 list1 = [i for elem in str1.split() for i in elem]
-print(set(list1))
+print(set(list1))    #  {'р', '!', ',', 'и', 'М', 'м', '5', '/', '='}
 
 
 
