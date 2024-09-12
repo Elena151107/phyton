@@ -33,13 +33,26 @@ print(list2)    #   [1, 2, 0, 3, 5, 2, 10, 7, 8]
 # home_work 4/3
 """ Напишите программу, которая принимает два списка и возвращает True,
 если первый список является подмножеством второго списка, и False в противном случае."""
-list1 = [7, 18, 11]
-list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-intersect_list = list(set(list2).intersection(list1))   # метод пересечения
-if intersect_list:
-    print('True')
-else:
+
+list1 = [4, 9, 8,'t']
+list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 7]
+flag = True
+for elem in list2:
+    for i in list1:
+        if i in list2:
+            flag = True
+        else:
+            flag = False
+if flag == False:
     print('False')
+else:
+    print('True')
+
+# intersect_list = list(set(list2).intersection(list1))   # метод пересечения
+# if intersect_list:
+#     print('True')
+# else:
+#     print('False')
 
 
 
