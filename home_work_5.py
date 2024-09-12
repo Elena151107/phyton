@@ -36,9 +36,13 @@ else:
  которая выводит все уникальные элементы из всех списков в кортеже.  """
 tup_1 = ([4, 8, 4, 9, 2, 8, 2], [44, 'p', 44, 'l', 44], [1, 0, 1, 0, 't', 1, 0], [4, 8, 4, 8, 'p'])
 print(tup_1)
+## 1
+list_unique = [i for elem in [list(set(elem)) for elem in tup_1] for i in elem]
+print(list_unique)    #  [8, 9, 2, 4, 44, 'p', 'l', 0, 1, 't', 8, 4, 'p']
+## 2
 unique_elem = [list(set(elem)) for elem in tup_1]
-print(unique_elem)    # [[8, 9, 2, 4], ['p', 44, 'l'], [0, 1, 't'], [8, 4, 'p']]
-
+list_unique = [i for elem in unique_elem for i in elem]
+print(list_unique)    #  [8, 9, 2, 4, 'l', 44, 'p', 0, 1, 't', 8, 4, 'p']
 
 
 # # home_work 5/4
