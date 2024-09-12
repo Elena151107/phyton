@@ -15,8 +15,19 @@ print(set1.intersection(set2))
 """ Создайте список кортежей, представляющих пары (страна, столица). Напишите программу, которая
 принимает на вход название страны и выводит её столицу, если она есть в списке, или сообщение об
 ошибке, если страна отсутствует. """
-
-
+list_tuple = [('Россия', 'Москва'), ('Италия', 'Рим'), ('Франция', 'Париж'), ('Тайланд', 'Бангкок'),
+              ('Япония', 'Токио'), ('Южная Корея', 'Сеул'), ('Китай', 'Пекин'), ('Греция', 'Афины'),
+              ('Турция', 'Анкара'), ('Мексика', 'Мехико')]
+list_tuple_2 = [i for elem in list_tuple for i in elem]
+name_country = input('Country: ')
+if name_country not in list_tuple_2:
+    print('This country have not in this list of countries')
+else:
+    for elem in list_tuple:
+        country = elem[0]
+        capital = elem[1]
+        if name_country == country:
+            print(f'The capital of {name_country} is {capital}')
 
 
 
