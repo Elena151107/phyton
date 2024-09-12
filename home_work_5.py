@@ -58,4 +58,61 @@ print(set(list1))    #  {'р', '!', ',', 'и', 'М', 'м', '5', '/', '='}
 """ Создайте программу «Англо-французский словарь». Нужно хранить слово на английском языке и его перевод
 на французский. Требуется реализовать возможность добавления, удаления, поиска, замены данных.
 Используйте словарь для хранения информации.  """
-
+dict_eng_franc = {}
+while True:
+    print()
+    action = int(input('Выберите действие: \n1 - Добавить новое слово'
+                       '\n2 - Удалить слово\n3 - Поиск слова\n4 - Изменить слово'
+                       '\n5 - Показать весь словарь\n0 - Выход.  '))
+    if action == 1:
+        word = input('Input your word in english: ')
+        translation = input('Input translation in french: ')
+        dict_eng_franc[word] = {
+            'translation': translation
+        }
+        print()
+        print(f'Слово [{word}] было добавлено в словарь')
+        print()
+    elif action == 2:
+        word = input('Input your word in english: ')
+        if word in dict_eng_franc:
+            del dict_eng_franc[word]
+            print()
+            print(f'Слово [{word}] удалено')
+        else:
+            print()
+            print(f'Слово [{word}] не найдено')
+    elif action == 3:
+        word = input('Input your word in english: ')
+        if word in dict_eng_franc:
+            print()
+            print(f'Вы искали слово: [{word}]  перевод: [{dict_eng_franc[word]['translation']}]')
+        else:
+            print()
+            print(f'Слово [{word}] не найдено')
+    elif action == 4:
+        word = input('Input your word in english: ')
+        if word in dict_eng_franc:
+            print()
+            print('Оставьте пустым, чтобы не менять')
+            print()
+            translation = input('Input translation in french: ')
+            if translation:
+                dict_eng_franc[word]['translation'] = translation
+                print()
+                print(f'Перевод [{translation}] обновлен')
+        else:
+            print()
+            print(f'Слово [{word}] не найдено')
+    elif action == 5:
+        if dict_eng_franc:
+            for word, translation in dict_eng_franc.items():
+                print(f' Слово [{word}]: перевод [{dict_eng_franc[word]['translation']}]')
+        else:
+            print()
+            print('Словарь пуст!')
+    elif action == 0:
+        break
+    else:
+        print()
+        print('mistake')
