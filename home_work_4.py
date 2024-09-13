@@ -39,10 +39,9 @@ list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 7]
 flag = True
 for elem in list2:
     for i in list1:
-        if i in list2:
-            flag = True
-        else:
+        if i not in list2:
             flag = False
+            break
 if flag == False:
     print('False')
 else:
