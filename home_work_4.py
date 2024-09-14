@@ -47,12 +47,6 @@ if flag == False:
 else:
     print('True')
 
-# intersect_list = list(set(list2).intersection(list1))   # метод пересечения
-# if intersect_list:
-#     print('True')
-# else:
-#     print('False')
-
 
 
 # home_work 4/4
