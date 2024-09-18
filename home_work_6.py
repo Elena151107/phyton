@@ -90,3 +90,48 @@ show_date_before(1, 3, 2023 )
 show_date_after(28, 2, 2023 )
 
 
+# # home_work 6/4
+"""  Оценка производительности сотрудников. Описание: 
+Создайте систему оценки производительности сотрудников на основе выполненных задач и их качества.
+Требования: Даны сотрудники и их выполненные задачи в формате списка словарей:
+Напишите функцию evaluate_performance(employees: list), которая:
+  - Рассчитывает и выводит рейтинг каждого сотрудника. Рейтинг вычисляется как произведение количества
+выполненных задач на их качество.
+  - Определяет лучшего и худшего сотрудника на основе рейтинга.
+Используйте циклы для обработки списка сотрудников, условия для определения лучшего и худшего сотрудника. """
+
+employees = [
+    {"name": "Alice",
+     "tasks_completed": 25,
+     "quality": 0.9},
+    {"name": "Bob",
+     "tasks_completed": 30,
+     "quality": 0.85},
+    {"name": "Charlie",
+     "tasks_completed": 20,
+     "quality": 0.95},
+]
+def evaluate_performance(employees: list):
+    rating_count = {}
+    list_rating = []
+    for employee in employees:
+        manager = employee['name']
+        rating = employee['tasks_completed'] * employee['quality']
+        if manager in rating_count:
+            rating_count[manager] += rating
+        else:
+            rating_count[manager] = rating
+    print('Результат: \n\nРейтинг сотрудников:')
+    for name, value in rating_count.items():
+        print(f'- {name}: {value}')
+    for name, value in rating_count.items():
+        list_rating.append(value)
+        max_value_rating = max(list_rating)
+        min_value_rating = min(list_rating)
+        if max_value_rating == value:
+            best_employee = name
+        if min_value_rating == value:
+            bad_employee = name
+    print(f'\nЛучший сотрудник: {best_employee}')
+    print(f'Худший сотрудник: {bad_employee}')
+evaluate_performance(employees)
