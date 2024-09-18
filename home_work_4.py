@@ -30,22 +30,21 @@ print(list2)    #   [1, 2, 0, 3, 5, 2, 10, 7, 8]
 
 
 
-# home_work 4/3
+# # home_work 4/3
 """ Напишите программу, которая принимает два списка и возвращает True,
 если первый список является подмножеством второго списка, и False в противном случае."""
-
-list1 = [4, 9, 8,'t']
+list1 = [8, 7, 6]
 list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 7]
-flag = True
-for elem in list2:
-    for i in list1:
-        if i not in list2:
-            flag = False
-            break
-if flag == False:
-    print('False')
-else:
+str1 = ''
+for i in list1:
+    str1 += str(i)
+str2 = ''
+for i in list2:
+    str2 += str(i)
+if str1 in str2:
     print('True')
+else:
+    print('False')
 
 
 
