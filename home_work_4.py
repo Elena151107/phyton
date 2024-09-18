@@ -41,10 +41,8 @@ for i in list1:
 str2 = ''
 for i in list2:
     str2 += str(i)
-if str1 in str2:
-    print('True')
-else:
-    print('False')
+result = "True" if str1 in str2 else "False"
+print(result)
 
 
 
