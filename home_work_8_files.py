@@ -19,7 +19,7 @@ def change_info(file_name, family, family_new, age_new):
             if not line.startswith(family):
                 lines.append(line)
             elif line.startswith(family):
-                lines_red = f'{family_new}:{age_new}'
+                lines_red = f'{family_new}:{age_new}\n'
                 lines_redact.append(lines_red)
     with open(file_name, 'w', encoding='utf-8') as f:
         print(f.writelines(lines + lines_redact))
@@ -45,7 +45,9 @@ def show_all_info(file_name, action):
     lines = []
     with open(file_name, 'r', encoding='utf-8') as f:
         for line in f:
-            if action == line[0] or (action.isdigit() and action == line[-2:]):        #!!!!!!!!!! ошибка = не выводит список по возрасту !!!!!
+            if action == line[0]:
+                lines.append(line)
+            elif action.isdigit() and len(action) == 2 and action in line:
                 lines.append(line)
         for line in lines:
             print(line)
@@ -91,8 +93,6 @@ def main():
             if not action.isdigit():
                 action = action.upper()
             print(show_all_info(file_name, action))
-        elif choice == 7:
-            print_info(file_name)
         else:
             print('Неверный выбор! Попробуйте снова')
 main()
